@@ -1797,6 +1797,8 @@ func (r *Runtime) toValue(i interface{}, origValue reflect.Value) Value {
 		return i
 	case valueContainer:
 		return i.toValue(r)
+	case GojaValue:
+		return i.ToGojaValue(r)
 	case Value:
 		return i
 	case string:

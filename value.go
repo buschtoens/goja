@@ -98,6 +98,10 @@ type valueContainer interface {
 	toValue(*Runtime) Value
 }
 
+type GojaValue interface {
+	ToGojaValue(*Runtime) Value
+}
+
 type typeError string
 type rangeError string
 type referenceError string
